@@ -1,6 +1,5 @@
 {
   "name": "wab-boilerplate",
-  "version": "0.0.1",
   "license": "MIT",
   "files": [
     "artifacts/",
@@ -12,24 +11,32 @@
     "compile": "hardhat compile"
   },
   "dependencies": {
+    "@layerzerolabs/lz-definitions": "latest",
+    "@layerzerolabs/lz-evm-sdk-v1": "latest",
+    "@layerzerolabs/lz-sdk": "latest",
     "@layerzerolabs/solidity-examples": "0.0.6",
+    "@layerzerolabs/ua-utils": "latest",
     "@openzeppelin/contracts": "^4.4.1"
   },
   "devDependencies": {
-    "@nomiclabs/hardhat-waffle": "2.0.3",
-    "@nomiclabs/hardhat-etherscan": "^3.1.0",
     "@ethersproject/hardware-wallets": "^5.0.14",
+    "@gnosis.pm/safe-core-sdk": "^3.2.0",
+    "@gnosis.pm/safe-ethers-lib": "^1.7.0",
+    "@gnosis.pm/safe-service-client": "^1.4.0",
     "@layerzerolabs/prettier-plugin-solidity": "^1.0.0-beta.19",
     "@nomicfoundation/hardhat-network-helpers": "^1.0.6",
     "@nomiclabs/hardhat-ethers": "^2.0.3",
-    "ethereum-waffle": "^3.2.0",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
+    "@nomiclabs/hardhat-waffle": "2.0.3",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
     "chai": "^4.3.4",
     "dotenv": "^10.0.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.1",
+    "ethereum-waffle": "^3.2.0",
     "ethers": "^5.5.2",
-    "hardhat": "^2.12.2",
+    "hardhat": "2.12.6",
     "hardhat-contract-sizer": "^2.1.1",
     "hardhat-deploy": "^0.10.5",
     "hardhat-deploy-ethers": "^0.3.0-beta.13",
@@ -37,6 +44,7 @@
     "prettier": "^2.4.1",
     "solhint": "^3.3.6",
     "solidity-coverage": "^0.8.2",
+    "ts-node": "^10.8.1",
     "typescript": "^3.7.0"
   }
 }

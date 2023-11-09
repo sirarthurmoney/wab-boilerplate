@@ -1,0 +1,119 @@
+{
+  "proxyContractConfig": {
+    "chain": "",
+    "name": "WrappedTokenBridge"
+  },
+  "contractConfig": {
+    "name": "OriginalTokenBridge"
+  },
+  "chainConfig": {
+    "ethereum-mainnet": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "chainX-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 100000,
+            "packetType_1": 0
+          }
+        }
+      }
+    },
+    "arbitrum-mainnet": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "chainX-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 100000,
+            "packetType_1": 0
+          }
+        }
+      }
+    },
+    "bsc-mainnet": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "chainX-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 100000,
+            "packetType_1": 0
+          }
+        }
+      }
+    },
+    "polygon-mainnet": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "chainX-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 100000,
+            "packetType_1": 0
+          }
+        }
+      }
+    },
+    "avalanche-mainnet": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "chainX-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 100000,
+            "packetType_1": 0
+          }
+        }
+      }
+    },
+    "chainX-mainnet": {
+      "useCustomAdapterParams": true,
+      "withdrawalFeeBps": 0,
+      "remoteNetworkConfig": {
+        "ethereum-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 0,
+            "packetType_1": 125000
+          }
+        },
+        "arbitrum-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 0,
+            "packetType_1": 2000000
+          }
+        },
+        "bsc-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 0,
+            "packetType_1": 125000
+          }
+        },
+        "polygon-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 0,
+            "packetType_1": 125000
+          }
+        },
+        "avalanche-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 0,
+            "packetType_1": 125000
+          }
+        }
+      }
+    }
+  },
+  "tokens": {
+    "ethereum-mainnet": {
+    },
+    "arbitrum-mainnet": {
+    },
+    "bsc-mainnet": {
+    },
+    "polygon-mainnet": {
+    },
+    "avalanche-mainnet": {
+    },
+    "chainX-mainnet":{
+    }
+  },
+  "sharedDecimals": {
+  }
+}
+
