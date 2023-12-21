@@ -1,6 +1,7 @@
 {
   "proxyContractConfig": {
     "chain": "",
+    "chainId": 0,
     "name": "WrappedTokenBridge"
   },
   "contractConfig": {
@@ -8,17 +9,6 @@
   },
   "chainConfig": {
     "ethereum-mainnet": {
-      "useCustomAdapterParams": true,
-      "remoteNetworkConfig": {
-        "chainX-mainnet": {
-          "minDstGasConfig": {
-            "packetType_0": 100000,
-            "packetType_1": 0
-          }
-        }
-      }
-    },
-    "arbitrum-mainnet": {
       "useCustomAdapterParams": true,
       "remoteNetworkConfig": {
         "chainX-mainnet": {
@@ -40,6 +30,17 @@
         }
       }
     },
+    "avalanche-mainnet": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "chainX-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 100000,
+            "packetType_1": 0
+          }
+        }
+      }
+    },
     "polygon-mainnet": {
       "useCustomAdapterParams": true,
       "remoteNetworkConfig": {
@@ -51,7 +52,29 @@
         }
       }
     },
-    "avalanche-mainnet": {
+    "arbitrum-mainnet": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "chainX-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 100000,
+            "packetType_1": 0
+          }
+        }
+      }
+    },
+    "optimism-mainnet": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "chainX-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 100000,
+            "packetType_1": 0
+          }
+        }
+      }
+    },
+    "fantom-mainnet": {
       "useCustomAdapterParams": true,
       "remoteNetworkConfig": {
         "chainX-mainnet": {
@@ -72,13 +95,13 @@
             "packetType_1": 125000
           }
         },
-        "arbitrum-mainnet": {
+        "bsc-mainnet": {
           "minDstGasConfig": {
             "packetType_0": 0,
-            "packetType_1": 2000000
+            "packetType_1": 125000
           }
         },
-        "bsc-mainnet": {
+        "avalanche-mainnet": {
           "minDstGasConfig": {
             "packetType_0": 0,
             "packetType_1": 125000
@@ -90,7 +113,19 @@
             "packetType_1": 125000
           }
         },
-        "avalanche-mainnet": {
+        "arbitrum-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 0,
+            "packetType_1": 2000000
+          }
+        },
+        "optimism-mainnet": {
+          "minDstGasConfig": {
+            "packetType_0": 0,
+            "packetType_1": 125000
+          }
+        },
+        "fantom-mainnet": {
           "minDstGasConfig": {
             "packetType_0": 0,
             "packetType_1": 125000
@@ -101,19 +136,37 @@
   },
   "tokens": {
     "ethereum-mainnet": {
-    },
-    "arbitrum-mainnet": {
+      "ETH": "0x0000000000000000000000000000000000000000",
+      "USDC": "0x0000000000000000000000000000000000000000"
     },
     "bsc-mainnet": {
-    },
-    "polygon-mainnet": {
+      "USDC": "0x0000000000000000000000000000000000000000"
     },
     "avalanche-mainnet": {
+      "USDC": "0x0000000000000000000000000000000000000000"
+    },
+    "polygon-mainnet": {
+      "USDC": "0x0000000000000000000000000000000000000000"
+    },
+    "arbitrum-mainnet": {
+      "ETH": "0x0000000000000000000000000000000000000000",
+      "USDC": "0x0000000000000000000000000000000000000000"
+    },
+    "optimsims-mainnet": {
+      "ETH": "0x0000000000000000000000000000000000000000",
+      "USDC": "0x0000000000000000000000000000000000000000"
+    },
+    "fantom-mainnet": {
+      "USDC": "0x0000000000000000000000000000000000000000"
     },
     "chainX-mainnet":{
+      "ETH": "0x0000000000000000000000000000000000000000",
+      "USDC": "0x0000000000000000000000000000000000000000"
     }
   },
   "sharedDecimals": {
+    "ETH": 18,
+    "USDC": 6
   }
 }
 

@@ -1,7 +1,7 @@
 const { getWalletContract } = require("../utils/crossChainHelper")
 const CHAIN_IDS = require("../constants/chainIds.json")
 const TOKENS = require("../constants/wireUpConfig.json").tokens
-const SHARED_DECIMALS = require("../constants/sharedDecimals.json")
+const SHARED_DECIMALS = require("../constants/wireUpConfig.json").sharedDecimals
 
 module.exports = async function (taskArgs, hre) {
 	const originalNetworks = taskArgs.originalNetworks.split(",")

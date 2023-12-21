@@ -6,28 +6,54 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
 	const ENV_TEST_TOKENS = {
 		"ethereum-testnet": {
 			"USDC": {
-				"contractName": "USDC",
 				"name": "USDC Mock",
 				"symbol": "USDC",
 				"decimals": "6"
 			},
-			"USDT": {
-				"contractName": "USDT",
-				"name": "USDT Mock",
-				"symbol": "USDT",
+		},
+		"bsc-testnet": {
+			"USDC": {
+				"name": "USDC Mock",
+				"symbol": "USDC",
+				"decimals": "6"
+			},
+		},
+		"avalanche-testnet": {
+			"USDC": {
+				"name": "USDC Mock",
+				"symbol": "USDC",
+				"decimals": "6"
+			},
+		},
+		"polygon-testnet": {
+			"USDC": {
+				"name": "USDC Mock",
+				"symbol": "USDC",
 				"decimals": "6"
 			},
 		},
 		"arbitrum-testnet": {
 			"USDC": {
-				"contractName": "USDC",
+				"name": "USDC Mock",
+				"symbol": "USDC",
+				"decimals": "6"
+			},
+		},
+		"optimism-testnet": {
+			"USDC": {
+				"name": "USDC Mock",
+				"symbol": "USDC",
+				"decimals": "6"
+			},
+		},
+		"fantom-testnet": {
+			"USDC": {
 				"name": "USDC Mock",
 				"symbol": "USDC",
 				"decimals": "6"
 			}
 		}
 	}
-
 
 	const tokensArray = Object.keys(ENV_TEST_TOKENS[hre.network.name])
 	for (const token of tokensArray) {

@@ -4,7 +4,7 @@ module.exports = async function ({ deployments, getNamedAccounts }) {
 	console.log(`Deployer address: ${deployer}`)
 
 	const wrappedTokenBridge = await ethers.getContract("WrappedTokenBridge")
-	const wrappedTokens = ["WETH", "USDC", "USDT"]
+	const wrappedTokens = ["ETH", "USDC"]
 
 	for (let i = 0; i < wrappedTokens.length; i++) {
 		await deploy(wrappedTokens[i], {

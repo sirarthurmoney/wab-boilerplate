@@ -1,11 +1,11 @@
 {
-  "ethereum":          101,
-  "bsc":               102,
-  "avalanche":         106,
-  "polygon":           109,
-  "arbitrum":          110,
-  "optimism":          111,
-  "fantom":            112,
+  "ethereum-mainnet":  101,
+  "bsc-mainnet":       102,
+  "avalanche-mainnet": 106,
+  "polygon-mainnet":   109,
+  "arbitrum-mainnet":  110,
+  "optimism-mainnet":  111,
+  "fantom-mainnet":    112,
 
   "ethereum-testnet":  10121,
   "bsc-testnet":       10102,
