@@ -27,13 +27,29 @@ module.exports = async function (taskArgs, hre) {
 			if (!originalToken) continue
 			const wrappedToken = TOKENS[wrappedNetwork][token]
 
-			console.log(`\n[${originalNetwork}] OriginalTokenBridge at ${originalTokenBridge.address} calling registerToken(${originalToken}, ${decimals})`)
-			let tx = await originalTokenBridge.registerToken(originalToken, decimals, { gasPrice: increasedGasPrice })
-			console.log(tx.hash)
+			try {
+				console.log(`\n[${originalNetwork}] OriginalTokenBridge at ${originalTokenBridge.address} calling registerToken(${originalToken}, ${decimals})`)
+				let tx = await originalTokenBridge.registerToken(originalToken, decimals, { gasPrice: increasedGasPrice })
+				console.log(tx.hash)
+			} catch (e) {
+				if(e?.error?.reason === "execution reverted: OriginalTokenBridge: token already registered") {
+					console.log("token already registered")
+				} else {
+					console.log(JSON.stringify(e))
+				}
+			}
 
-			console.log(`[${wrappedNetwork}] WrappedTokenBridge at ${wrappedTokenBridge.address} calling registerToken(${wrappedToken}, ${originalTokenChainId}, ${originalToken})`)
-			tx = await wrappedTokenBridge.registerToken(wrappedToken, originalTokenChainId, originalToken, { gasPrice: increasedWrappedGasPrice })
-			console.log(tx.hash)
+			try {
+				console.log(`[${wrappedNetwork}] WrappedTokenBridge at ${wrappedTokenBridge.address} calling registerToken(${wrappedToken}, ${originalTokenChainId}, ${originalToken})`)
+				tx = await wrappedTokenBridge.registerToken(wrappedToken, originalTokenChainId, originalToken, { gasPrice: increasedGasPrice })
+				console.log(tx.hash)
+			} catch (e) {
+				if(e?.error?.reason === "execution reverted: WrappedTokenBridge: token already registered") {
+					console.log("token already registered")
+				} else {
+					console.log(JSON.stringify(e))
+				}
+			}
 		}
 	}
 }

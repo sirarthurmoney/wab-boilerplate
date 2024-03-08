@@ -4,14 +4,16 @@ module.exports = async function (taskArgs, hre) {
 	const amount = ethers.utils.parseEther(taskArgs.amount)
 	const bridge = await ethers.getContract("OriginalTokenBridge")
 
-	const nativeFee = (await bridge.estimateBridgeFee(false, "0x")).nativeFee
+	let adapterParams = ethers.utils.solidityPack(["uint16", "uint256"], [1, 150000])
+	const nativeFee = (await bridge.estimateBridgeFee(false, adapterParams)).nativeFee
+	console.log({nativeFee})
 	const increasedNativeFee = nativeFee.mul(5).div(4) // 20% increase
 	const callParams = {
 		refundAddress: owner.address,
 		zroPaymentAddress: ethers.constants.AddressZero
 	}
 
-	tx = await bridge.bridgeNative(amount, owner.address, callParams, "0x", { value: amount.add(increasedNativeFee) })
+	tx = await bridge.bridgeNative(amount, owner.address, callParams, adapterParams, { value: amount.add(increasedNativeFee) })
 	await tx.wait()
 	console.log(`Bridged ${tx.hash}`)
 }
